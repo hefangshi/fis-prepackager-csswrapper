@@ -27,3 +27,56 @@ fis.config.get('roadmap.path').unshift({
     }
 });
 ```
+
+## 效果
+
+### 包装前
+
+```css
+/* modules/main.css */
+body {
+    color : #999;
+}
+```
+
+### 包装后
+
+#### isMod: true
+
+```javascript
+define('modules/main.css', function(require, exports, module){
+    function importStyle(css, id) {
+        var ele = document.createElement('style');
+        ele.id = id;
+        document.getElementsByTagName('head')[0].appendChild(ele);
+        if (ele.styleSheet) {
+            ele.styleSheet.cssText = css;
+        } else {
+            ele.appendChild(document.createTextNode(css));
+        }
+    };
+    importStyle("body {\r\n  color : #999;\r\n}", "modules/main.css"); 
+});
+//自执行
+require("modules/main.css")
+```
+
+#### isMod: false
+
+```javascript
+!function() {
+    try {
+        function importStyle(css, id) {
+            var ele = document.createElement('style');
+            ele.id = id;
+            document.getElementsByTagName('head')[0].appendChild(ele);
+            if (ele.styleSheet) {
+                ele.styleSheet.cssText = css;
+            } else {
+                ele.appendChild(document.createTextNode(css));
+            }
+        };
+        importStyle("body {\r\n  color : #999;\r\n}", "modules/main.css");
+    } catch(e) {}
+}();
+```
