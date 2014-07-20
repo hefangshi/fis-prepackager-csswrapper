@@ -1,0 +1,14 @@
+{
+  "name": "fis-prepackager-csswrapper",
+  "version": "0.0.0",
+  "description": "a csswrapper for fis to wrap css to javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis"
+  ],
+  "author": "hefangshi",
+  "license": "BSD"
+}
