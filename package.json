@@ -9,6 +9,10 @@
   "keywords": [
     "fis"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hefangshi/fis-prepackager-csswrapper"
+  },
   "author": "hefangshi",
   "license": "BSD"
 }
