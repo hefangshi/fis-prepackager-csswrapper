@@ -27,7 +27,3 @@ fis.config.get('roadmap.path').unshift({
     }
 });
 ```
-
-## 注意
-
-importStyle **暂不支持IE6** ，有兼容的方法请提Issue告知，感谢；）

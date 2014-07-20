@@ -8,12 +8,12 @@
 function importStyle(css, id) {
     var ele = document.createElement('style');
     ele.id = id;
+    document.getElementsByTagName('head')[0].appendChild(ele);
     if (ele.styleSheet) {
         ele.styleSheet.cssText = css;
     } else {
         ele.appendChild(document.createTextNode(css));
     }
-    document.getElementsByTagName('head')[0].appendChild(ele);
 }
 
 function wrap(file, settings, opt){

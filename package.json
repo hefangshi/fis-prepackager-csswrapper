@@ -1,6 +1,6 @@
 {
   "name": "fis-prepackager-csswrapper",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a csswrapper for fis to wrap css to javascript",
   "main": "index.js",
   "scripts": {
