@@ -1,5 +1,7 @@
 # fis-prepackager-csswrapper
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hefangshi/fis-prepackager-csswrapper.svg)](https://greenkeeper.io/)
+
 用于将样式包装为脚本的[FIS](https://github.com/fex-team/fis/)插件
 
 ## 功能
